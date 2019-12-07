@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import unicode_literals
 
 from django.db import models
@@ -24,4 +26,4 @@ class Comment(models.Model):
     objects = models.Manager()
 
     def __str__(self):
-        return '%s -%s'%(self.user,self.content)
+        return '%s : %s - %s'%(self.user,self.content,self.created_at)

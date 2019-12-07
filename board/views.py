@@ -36,7 +36,7 @@ class CommentList(APIView):
         queryset = Comment.objects.filter(post_id=pk)
         serializer = CommentSerializer(
             queryset, many=True, context={'request': request})
-        return Response(serializer.data)
+        return Response(serializer.data) 
 
 
 

@@ -22,8 +22,8 @@ post_detail = PostView.as_view({
 
 urlpatterns = format_suffix_patterns([
     path('auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('posts/', post_list, name='post_list'),
-    path('posts/<int:pk>/', post_detail, name='post-detail'),
-    path('posts/<int:pk>/comments/', views.CommentList.as_view()),
-    path('posts/<int:post_pk>/comments/<int:comment_pk>/',views.CommentDetail.as_view()),
+    path('post/', post_list, name='post_list'),
+    path('post/<int:pk>/', post_detail, name='post-detail'),
+    path('post/<int:pk>/comment/', views.CommentList.as_view()),
+    path('post/<int:post_pk>/comment/<int:comment_pk>/',views.CommentDetail.as_view()),
 ])
